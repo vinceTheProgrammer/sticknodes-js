@@ -11,10 +11,10 @@ echo "📦 Building bundler target..."
 wasm-pack build --target bundler --out-dir pkg-bundler
 
 echo "📦 Building nodejs target..."
-wasm-pack build --target nodejs --out-dir pkg-nodejs
+wasm-pack build --target nodejs --out-dir pkg-nodejs --out-name sticknodes_js_nodejs
 
 echo "📦 Building web target..."
-wasm-pack build --target web --out-dir pkg-web
+wasm-pack build --target web --out-dir pkg-web --out-name sticknodes_js_web
 
 echo "📂 Creating merged pkg/ directory..."
 mkdir pkg

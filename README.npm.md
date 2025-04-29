@@ -13,7 +13,7 @@ npm install sticknodes-js
 ### In the Browser (Web)
 ```html
 <script type="module">
-  import init from "https://unpkg.com/sticknodes-js@1.0.0/sticknodes_js.js";
+  import init from "https://unpkg.com/sticknodes-js@1.0.1/sticknodes_js_web.js";
   init().then(module => {
     // Your code here
   });
