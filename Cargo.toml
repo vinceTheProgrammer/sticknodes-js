@@ -1,0 +1,19 @@
+[package]
+name = "sticknodes-js"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2.100"
+sticknodes-rs = { path = "../sticknodes-rs" }
+serde = { version = "1.0.219", features = ["derive"] }
+serde-wasm-bindgen = "0.6.5"
+console_error_panic_hook = "0.1.7"
+ts-rs = "10.1.0"
+
+[features]
+default = ["console_error_panic_hook"]
+console_error_panic_hook = []
