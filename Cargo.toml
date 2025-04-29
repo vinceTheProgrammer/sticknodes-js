@@ -1,7 +1,14 @@
 [package]
 name = "sticknodes-js"
+description = "JavaScript bindings for unofficial Stick Nodes asset manipulation library. Currently only supports Stickfigures. Currently only supports assets up to version 4.1.0 build 21."
+keywords = ["stick", "nodes", "asset", "read", "write"]
+categories = ["parser-implementations"]
 version = "1.0.0"
+license = "MIT"
 edition = "2024"
+
+[badges]
+maintenance = { status = "passively-maintained" }
 
 [lib]
 crate-type = ["cdylib", "rlib"]

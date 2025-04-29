@@ -1,6 +1,6 @@
 use serde::Deserialize;
-use wasm_bindgen::prelude::*;
 use ts_rs::TS;
+use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 #[derive(Clone, Copy, Deserialize, TS)]
@@ -13,13 +13,23 @@ pub struct Color {
 
 impl From<sticknodes_rs::Color> for Color {
     fn from(color: sticknodes_rs::Color) -> Self {
-        Color { red: color.red, green: color.green, blue: color.blue, alpha: color.alpha }
+        Color {
+            red: color.red,
+            green: color.green,
+            blue: color.blue,
+            alpha: color.alpha,
+        }
     }
 }
 
 impl From<Color> for sticknodes_rs::Color {
     fn from(color: Color) -> Self {
-        sticknodes_rs::Color { alpha: color.alpha, blue: color.blue, green: color.green, red: color.red }
+        sticknodes_rs::Color {
+            alpha: color.alpha,
+            blue: color.blue,
+            green: color.green,
+            red: color.red,
+        }
     }
 }
 
