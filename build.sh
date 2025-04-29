@@ -4,3 +4,4 @@
 cargo test
 ./scripts/build-all.sh
 node ./scripts/postbuild.js
+node scripts/update-readme-version.js

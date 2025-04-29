@@ -13,10 +13,13 @@ npm install sticknodes-js
 ### In the Browser (Web)
 ```html
 <script type="module">
-  import init from "https://unpkg.com/sticknodes-js@1.0.1/sticknodes_js_web.js";
-  init().then(module => {
-    // Your code here
-  });
+    import init, * as sn from "https://cdn.jsdelivr.net/npm/sticknodes-js@VERSION/sticknodes_js_web.js";
+    init().then(() => {
+        // Example usage
+        const stickfigure = new sn.Stickfigure();
+
+        // Reference docs (or source code if docs don't exist yet) for other usage
+    });
 </script>
 ```
 

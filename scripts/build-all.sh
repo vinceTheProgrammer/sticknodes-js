@@ -23,12 +23,12 @@ echo "🧩 Copying bundler build..."
 cp pkg-bundler/* pkg/
 
 echo "🧩 Copying nodejs build with renamed files..."
-cp pkg-nodejs/${LIB_NAME}.js pkg/${LIB_NAME}_nodejs.js
-cp pkg-nodejs/${LIB_NAME}_bg.wasm pkg/${LIB_NAME}_nodejs_bg.wasm
+cp pkg-nodejs/${LIB_NAME}_nodejs.js pkg/${LIB_NAME}_nodejs.js
+cp pkg-nodejs/${LIB_NAME}_nodejs_bg.wasm pkg/${LIB_NAME}_nodejs_bg.wasm
 
 echo "🧩 Copying web build with renamed files..."
-cp pkg-web/${LIB_NAME}.js pkg/${LIB_NAME}_web.js
-cp pkg-web/${LIB_NAME}_bg.wasm pkg/${LIB_NAME}_web_bg.wasm
+cp pkg-web/${LIB_NAME}_web.js pkg/${LIB_NAME}_web.js
+cp pkg-web/${LIB_NAME}_web_bg.wasm pkg/${LIB_NAME}_web_bg.wasm
 
 echo "📝 Rewriting package.json..."
 
