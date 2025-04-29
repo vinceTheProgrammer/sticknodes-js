@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+
+set -e
+
+LIB_NAME="sticknodes_js"
+
+echo "🔨 Cleaning previous builds..."
+rm -rf pkg pkg-bundler pkg-nodejs pkg-web
+
+echo "📦 Building bundler target..."
+wasm-pack build --target bundler --out-dir pkg-bundler
+
+echo "📦 Building nodejs target..."
+wasm-pack build --target nodejs --out-dir pkg-nodejs
+
+echo "📦 Building web target..."
+wasm-pack build --target web --out-dir pkg-web
+
+echo "📂 Creating merged pkg/ directory..."
+mkdir pkg
+
+echo "🧩 Copying bundler build..."
+cp pkg-bundler/* pkg/
+
+echo "🧩 Copying nodejs build with renamed files..."
+cp pkg-nodejs/${LIB_NAME}.js pkg/${LIB_NAME}_nodejs.js
+cp pkg-nodejs/${LIB_NAME}_bg.wasm pkg/${LIB_NAME}_nodejs_bg.wasm
+
+echo "🧩 Copying web build with renamed files..."
+cp pkg-web/${LIB_NAME}.js pkg/${LIB_NAME}_web.js
+cp pkg-web/${LIB_NAME}_bg.wasm pkg/${LIB_NAME}_web_bg.wasm
+
+echo "📝 Rewriting package.json..."
+
+# Copy your existing root-level package.json as a base
+cp pkg-bundler/package.json pkg/package.json
+
+# Use jq to overwrite build-specific fields
+jq --arg lib "$LIB_NAME" '
+  .main = "./\($lib)_nodejs.js" |
+  .types = "./\($lib).d.ts" |
+  .exports = {
+    "import": {
+      "node": "./\($lib)_nodejs.js",
+      "default": "./\($lib).js"
+    },
+    "require": "./\($lib)_nodejs.js",
+    "web": "./\($lib)_web.js"
+  } |
+  .files = [
+    "\($lib).js",
+    "\($lib).d.ts",
+    "\($lib)_bg.wasm",
+    "\($lib)_nodejs.js",
+    "\($lib)_nodejs_bg.wasm",
+    "\($lib)_web.js",
+    "\($lib)_web_bg.wasm"
+  ]
+' pkg/package.json > pkg/package.tmp.json && mv pkg/package.tmp.json pkg/package.json
+
+echo "✅ package.json merged and updated."
+
+echo "📘 Copying JS README into pkg..."
+cp README.npm.md pkg/README.md
+echo "✅ README copied into pkg."

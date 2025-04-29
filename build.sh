@@ -2,5 +2,5 @@
 
 # build.sh
 cargo test
-wasm-pack build --target bundler --dev
+./scripts/build-all.sh
 node ./scripts/postbuild.js
