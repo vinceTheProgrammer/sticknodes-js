@@ -48,13 +48,9 @@ jq --arg lib "$LIB_NAME" '
     "web": "./\($lib)_web.js"
   } |
   .files = [
-    "\($lib).js",
-    "\($lib).d.ts",
-    "\($lib)_bg.wasm",
-    "\($lib)_nodejs.js",
-    "\($lib)_nodejs_bg.wasm",
-    "\($lib)_web.js",
-    "\($lib)_web_bg.wasm"
+    "*.js",
+    "*.wasm",
+    "*.d.ts"
   ]
 ' pkg/package.json > pkg/package.tmp.json && mv pkg/package.tmp.json pkg/package.json
 
