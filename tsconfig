@@ -1,0 +1,8 @@
+{
+    "files": ["./sticknodes_js.js", "sticknodes_js.d.ts", "sticknodes_js_bg.js", "sticknodes_js_bg.wasm.d.ts"],
+    "compilerOptions": {
+        "outDir": "./dist",
+        "allowJs": true
+    }
+    
+}

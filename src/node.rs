@@ -303,6 +303,7 @@ impl Node {
 
 #[wasm_bindgen]
 #[derive(Copy, Clone, PartialEq, Eq, Deserialize, TS)]
+#[serde(from = "f64")]
 pub enum NodeType {
     RootNode = -1,
     RoundedSegment = 0,
@@ -313,6 +314,23 @@ pub enum NodeType {
     Ellipse = 5,
     Trapezoid = 6,
     Polygon = 7,
+}
+
+impl From<f64> for NodeType {
+    fn from(value: f64) -> Self {
+        match value {
+            -1.0 => NodeType::RootNode,
+            0.0 => NodeType::RoundedSegment,
+            1.0 => NodeType::Segment,
+            2.0 => NodeType::Circle,
+            3.0 => NodeType::Triangle,
+            4.0 => NodeType::FilledCircle,
+            5.0 => NodeType::Ellipse,
+            6.0 => NodeType::Trapezoid,
+            7.0 => NodeType::Polygon,
+            _ => NodeType::RoundedSegment,
+        }
+    }
 }
 
 impl From<sticknodes_rs::NodeType> for NodeType {
