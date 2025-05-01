@@ -38,13 +38,10 @@ jobs:
       - name: Run build script
         run: ./build.sh
 
-      - name: Generate documentation
-        run: ./scripts/generate-docs.sh
-
       - name: Deploy to pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./pkg/docs
+          publish_dir: ./pkg/vpdocs/.vitepress/dist
           publish_branch: pages
           force_orphan: true

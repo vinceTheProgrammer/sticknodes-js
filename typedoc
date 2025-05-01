@@ -1,3 +1,5 @@
 {
     "entryPoints": ["sticknodes_js.js"],
+    "readme": "README.docs.md",
+    "name": "sticknodes-js API"
 }

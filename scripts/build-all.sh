@@ -52,7 +52,12 @@ jq --arg lib "$LIB_NAME" '
     "*.js",
     "*.wasm",
     "*.d.ts"
-  ]
+  ] |
+  .scripts = {
+    "docs:dev": "vitepress dev vpdocs",
+    "docs:build": "vitepress build vpdocs",
+    "docs:preview": "vitepress preview vpdocs"
+  }
 ' pkg/package.json > pkg/package.tmp.json && mv pkg/package.tmp.json pkg/package.json
 
 echo "✅ package.json merged and updated."
@@ -60,5 +65,3 @@ echo "✅ package.json merged and updated."
 echo "📘 Copying JS README into pkg..."
 cp README.npm.md pkg/README.md
 echo "✅ README copied into pkg."
-
-./scripts/generate-docs.sh
