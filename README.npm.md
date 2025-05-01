@@ -9,6 +9,7 @@ To install via NPM:
 npm install sticknodes-js
 ```
 
+## Usage
 ### In Node.js or Bundlers (e.g., Webpack, Rollup, Parcel)
 ```js
 import { Stickfigure, NodeType, Color } from "sticknodes-js";
@@ -22,7 +23,6 @@ const obj = stickfigure.to_jsobject();
 console.log(JSON.stringify(obj, undefined, 1));
 ```
 
-## Usage
 ### In the Browser (Web)
 ```html
 <script type="module">
@@ -39,6 +39,9 @@ console.log(JSON.stringify(obj, undefined, 1));
     });
 </script>
 ```
+
+## Documentation
+Auto generated, detailed docs can be found [here](https://vincetheprogrammer.github.io/sticknodes-js/).
 
 ## TypeScript Definitions
 The library includes TypeScript definitions to ensure smooth integration with TypeScript projects.
