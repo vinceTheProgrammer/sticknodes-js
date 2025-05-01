@@ -11,7 +11,7 @@ echo "📦 Building bundler target..."
 wasm-pack build --target bundler --out-dir pkg-bundler
 
 echo "📦 Building nodejs target..."
-wasm-pack build --target nodejs --out-dir pkg-nodejs --out-name sticknodes_js_nodejs
+wasm-bindgen --target experimental-nodejs-module ./target/wasm32-unknown-unknown/release/sticknodes_js.wasm --out-dir pkg-nodejs --out-name sticknodes_js_nodejs
 
 echo "📦 Building web target..."
 wasm-pack build --target web --out-dir pkg-web --out-name sticknodes_js_web
@@ -24,6 +24,7 @@ cp pkg-bundler/* pkg/
 
 echo "🧩 Copying nodejs build with renamed files..."
 cp pkg-nodejs/${LIB_NAME}_nodejs.js pkg/${LIB_NAME}_nodejs.js
+cp pkg-nodejs/${LIB_NAME}_nodejs_bg.js pkg/${LIB_NAME}_nodejs_bg.js
 cp pkg-nodejs/${LIB_NAME}_nodejs_bg.wasm pkg/${LIB_NAME}_nodejs_bg.wasm
 
 echo "🧩 Copying web build with renamed files..."
@@ -59,3 +60,5 @@ echo "✅ package.json merged and updated."
 echo "📘 Copying JS README into pkg..."
 cp README.npm.md pkg/README.md
 echo "✅ README copied into pkg."
+
+./scripts/generate-docs.sh
