@@ -1,5 +1,7 @@
 {
     "entryPoints": ["sticknodes_js.js"],
     "readme": "README.docs.md",
-    "name": "sticknodes-js API"
+    "includeVersion": true,
+    "name": "sticknodes-js API Documentation",
+    "hideGenerator": true
 }

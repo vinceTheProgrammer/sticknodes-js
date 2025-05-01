@@ -16,16 +16,15 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Introduction',
         items: [
-          { text: 'Guide', link: '/markdown-examples' },
-          { text: 'API Docs', link: `https://vincetheprogrammer.github.io${base}docs/index.html` }
+          { text: 'Getting Started', link: '/getting-started' }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/vinceTheProgrammer/sticknodes-js' }
     ]
   }
 })

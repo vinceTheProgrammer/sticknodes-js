@@ -4,22 +4,22 @@ layout: home
 
 hero:
   name: "sticknodes-js"
-  text: "Site for sticknodes-js"
-  tagline: My great project tagline
+  text: "Stick Nodes asset manipulation library"
+  tagline: Unlock the full potential of Stick Nodes
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Guide
+      link: /getting-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: API Documentation
+      link: https://vincetheprogrammer.github.io/sticknodes-js/docs/index.html
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Read/Write
+    details: Read/write .nodes files
+  - title: Create
+    details: Create new Stickfigures programatically
+  - title: Modify
+    details: Modify existing Stickfigures programatically
 ---
 
