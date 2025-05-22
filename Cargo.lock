@@ -192,7 +192,7 @@ dependencies = [
 
 [[package]]
 name = "sticknodes-js"
-version = "1.0.10"
+version = "1.0.11"
 dependencies = [
  "console_error_panic_hook",
  "serde",
@@ -204,9 +204,9 @@ dependencies = [
 
 [[package]]
 name = "sticknodes-rs"
-version = "1.0.0"
+version = "2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "88ceb751458bfb29a6497ce82a0194f72614e49005e69aa1dca667933e7a7df9"
+checksum = "d1749c1f158128ea6250752204c3d8af2a5e1c92ed307b43890bb5c51dd13d11"
 dependencies = [
  "byteorder-core2",
  "core2",

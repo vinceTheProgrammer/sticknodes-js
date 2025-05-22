@@ -227,13 +227,15 @@ impl Stickfigure {
             Ok(node)
         } else {
             Err(JsError::new(
-                "INTERAL ERROR: Parent node not found. Searched for index {}. This was not expected to happen. Most likely an error with sticknodes-js, not you.",
+                format!("Node not found. Searched for index {}.", draw_index.0).as_str()
             ))
         }
     }
 
-    pub(crate) fn get_parent_node_draw_index(&self, draw_index: DrawOrderIndex) -> DrawOrderIndex {
-        self.inner.borrow().get_parent(draw_index)
+    pub(crate) fn get_parent_node_draw_index(&self, draw_index: DrawOrderIndex) -> Result<DrawOrderIndex, JsError> {
+        self.inner.borrow().get_parent(draw_index).ok_or_else(|| JsError::new(
+            format!("Parent node not found. Searched for parent node of index {}.", draw_index.0).as_str()
+        ))
     }
 
     pub(crate) fn get_child_node_draw_indices(

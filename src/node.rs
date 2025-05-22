@@ -171,7 +171,7 @@ impl Node {
         let current_node_draw_index = self.get_draw_index();
         Ok(self
             .stickfigure
-            .get_parent_node_draw_index(current_node_draw_index)
+            .get_parent_node_draw_index(current_node_draw_index)?
             .0 as usize)
     }
 
@@ -202,7 +202,7 @@ impl Node {
 
         let parent_node_draw_index = {
             self.stickfigure
-                .get_parent_node_draw_index(current_node_draw_index)
+                .get_parent_node_draw_index(current_node_draw_index)?
         };
 
         self.stickfigure

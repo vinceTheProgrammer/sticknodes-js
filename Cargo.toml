@@ -3,7 +3,7 @@ name = "sticknodes-js"
 description = "JavaScript bindings for unofficial Stick Nodes asset manipulation library. Currently only supports Stickfigures. Currently only supports assets up to version 4.1.0 build 21."
 keywords = ["stick", "nodes", "asset", "read", "write"]
 categories = ["parser-implementations"]
-version = "1.0.10"
+version = "1.0.11"
 license = "MIT"
 edition = "2024"
 
@@ -19,7 +19,7 @@ serde = { version = "1.0.219", features = ["derive"] }
 serde-wasm-bindgen = "0.6.5"
 console_error_panic_hook = "0.1.7"
 ts-rs = "10.1.0"
-sticknodes-rs = "1.0.0"
+sticknodes-rs = "2.0.1"
 
 [features]
 default = ["console_error_panic_hook"]
