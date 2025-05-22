@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.auQBJlJf.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"nodes/anatomy.md","filePath":"nodes/anatomy.md"}'),o={name:"nodes/anatomy.md"};function n(s,r,c,d,m,p){return a(),t("div")}const f=e(o,[["render",n]]);export{i as __pageData,f as default};

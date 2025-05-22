@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./chunks/framework.auQBJlJf.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"stickfigures/modify.md","filePath":"stickfigures/modify.md"}'),o={name:"stickfigures/modify.md"};function r(a,i,c,f,n,d){return s(),t("div")}const _=e(o,[["render",r]]);export{p as __pageData,_ as default};

@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.auQBJlJf.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"polyfills/delete.md","filePath":"polyfills/delete.md"}'),l={name:"polyfills/delete.md"};function o(s,r,c,n,d,p){return a(),t("div")}const f=e(l,[["render",o]]);export{_ as __pageData,f as default};

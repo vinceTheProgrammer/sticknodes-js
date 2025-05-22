@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.auQBJlJf.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"nodes/bulk.md","filePath":"nodes/bulk.md"}'),o={name:"nodes/bulk.md"};function s(n,r,c,d,l,p){return a(),t("div")}const m=e(o,[["render",s]]);export{i as __pageData,m as default};

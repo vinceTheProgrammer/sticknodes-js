@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.auQBJlJf.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"polyfills/examples.md","filePath":"polyfills/examples.md"}'),s={name:"polyfills/examples.md"};function l(o,p,r,c,n,i){return a(),t("div")}const _=e(s,[["render",l]]);export{f as __pageData,_ as default};
